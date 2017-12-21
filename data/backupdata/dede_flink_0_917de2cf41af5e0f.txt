@@ -1,0 +1,5 @@
+INSERT INTO `dede_flink` VALUES('2','3','http://www.66vt.com','搜妹妹网','','','','1226375403','1','2');
+INSERT INTO `dede_flink` VALUES('9','1','http://www.dedegg.com/','织梦源码','','','','1227772717','1','2');
+INSERT INTO `dede_flink` VALUES('8','2','http://www.dedegg.com/','织梦模板','','','','1227772703','1','2');
+INSERT INTO `dede_flink` VALUES('10','4','http://www.inewya.com','新亚网','','','','1374106945','1','2');
+INSERT INTO `dede_flink` VALUES('11','5','http://news.huanzhexin.com/','骗子医院','','','','1374106965','1','2');

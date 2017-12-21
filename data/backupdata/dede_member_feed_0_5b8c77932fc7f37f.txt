@@ -1,0 +1,1 @@
+INSERT INTO `dede_member_feed` VALUES('1','0','','','feedback','4','1374129232',' 评论了文章 &lt;a href=&#039;/plus/view.php?aid=4&#039;&gt;关于在帅哥医生面前抬不起头这件事&lt;/a&gt;','好文章 搞笑','1');

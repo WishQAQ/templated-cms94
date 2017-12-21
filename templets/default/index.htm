@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+	
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+-->
+</script>
+</head>
+<body>
+{dede:include filename="head2.htm"/}
+<!-- /header -->
+<div id="content"><div class="main"><div class="crumbs"><div class="crumbs_name"><i></i><p>最新评论：</p></div><div id="mp_lastcom"><ul>
+{dede:feedback row='6' titlelen='180' infolen='80'}
+<li><a href="[field:aid runphp='yes']
+$sql = "select typedir from dede_arctype where id=(select typeid from dede_archives where id=@me)";
+$query = mysql_query($sql);
+$row=mysql_fetch_array($query);
+@me=$row[typedir]."/".@me.".html";
+[/field:aid]" title="[field:title function='html2text(@me)'/]">[field:username function="(@me=='guest' ? '游客' : @me)"/]</a> » <a href="[field:global.cfg_phpurl/]/feedback.php?aid=[field:aid/]" title="查看 《[field:title function='html2text(@me)'/]》 的所有评论">[field:msg/]</a></li>{/dede:feedback}</ul><script type="text/javascript">function js_lastcom(obj){$(obj).find("ul:first").animate({marginTop:"-25px"},500,function(){$(this).css({marginTop:"0px"}).find("li:first").appendTo(this);});}$(document).ready(function(){var myar=setInterval('js_lastcom("#mp_lastcom")',3600);$("#mp_lastcom").hover(function(){clearInterval(myar);},function(){myar = setInterval('js_lastcom("#mp_lastcom")',3600)});});</script></div></div><div class="clear"></div><div class="slider"><div id="slider_img"><div class="nbox">
+{dede:arclist row=5 orderby=pubdate titlelen='180' flag='s'}
+
+<div class="slider_box"><div class="thumbnail_box"><div class="thumbnail"><a href="[field:arcurl/]" rel="bookmark" title="[field:title function='html2text(@me)'/]"><img src="[field:litpic/]" width="140px" height="100px" alt="[field:title function='html2text(@me)'/]"/></a></div></div><div class="descs"><h2 class="title entry-title"><a href="[field:arcurl/]" rel="bookmark" title="详细阅读 《[field:title/]》">[field:title function='(strlen("@me")>60 ? cn_substr("@me",60)."..." : "@me")'/]</a></h2><div class="slider_info">作者：<span class="vcard author"><span class="fn">[field:writer/]</span></span> | 发布：<span class="updated">[field:pubdate function="MyDate('Y年m月d日',@me)"/]</span> | 踩踏：[field:click/]次 | 评论：<a href="[field:arcurl/]#comments" title="《[field:title/]》上的评论"><script type="text/javascript" src="/plus/feedcount.php?aid=[field:id/]"></script></a></div><div class="slider_info">摘要：[field:description function='cn_substr(@me,110)'/]...</div><div class="slider_infos">来自栏目：<a href="[field:typeurl/]" title="查看 [field:typename/] 的所有文章">[field:typename/]</a></div></div></div>{/dede:arclist}
+
+</div></div><div id="focus_links"><ul><li class="act"><a href="javascript:void(0)"></a></li><li ><a href="javascript:void(0)"></a></li><li ><a href="javascript:void(0)"></a></li><li ><a href="javascript:void(0)"></a></li><li ><a href="javascript:void(0)"></a></li></ul></div></div>
+<script type="text/javascript">$(document).ready(function(){setFocusSlid('#focus_links','#slider_img',700,'h');});function setFocusSlid(linksId,imgId,height,dir){var li=$(linksId).find('li');var count=li.length;var focusIndex=0;var focusInterval;var step=1;var slidover=function(){var li=$(linksId).find('li');li.removeClass('act');$(li[focusIndex]).addClass('act');$(imgId).stop();if(dir=='h'){$(imgId).animate({scrollLeft:height*focusIndex},500);}else{$(imgId).animate({scrollTop:height*focusIndex},500);}}
+var slidout=function(){focusInterval=setInterval(slidInterval,3000);}
+var slidInterval=function(){slidover();if(focusIndex==0){step=1;}
+if(focusIndex==count-1){step=-1;}focusIndex+=step;}
+li.each(function(i){$(this).hover(function(){clearInterval(focusInterval);focusIndex=i;slidover();},function(){slidout();});});focusIndex=1;slidout();}</script><div class="clear"></div>
+{dede:arclist row=1 orderby=pubdate titlelen='180' flag='h'}
+<ul class="post-871 post type-post status-publish format-standard sticky hentry category-template tag-mepal tag-mepal tag-wordpress tag-206" id="post-871"><li><div class="article"><div class="mp_article"><h2 class="title entry-title"><i class="posttop postding"></i><a href="[field:arcurl/]" rel="bookmark" title="详细阅读 《[field:title/]》">[field:title function='(strlen("@me")>60 ? cn_substr("@me",60)."..." : "@me")'/]</a><span class="new"></span></h2><div class="thumbnail_box"><div class="thumbnail"><a href="[field:arcurl/]" rel="bookmark" title="[field:title function='html2text(@me)'/]"><img src="[field:litpic/]" width="140px" height="100px" alt="[field:title function='html2text(@me)'/]"/></a></div></div><div class="preview">导读：[field:description function='cn_substr(@me,240)'/]...</div><div class="info">作者：<span class="vcard author"><span class="fn">[field:writer/]</span></span> | 发布：<span class="updated">[field:pubdate function="MyDate('Y年m月d日',@me)"/]</span> | 分类： <a href="[field:typeurl/]" title="查看 [field:typename/] 的所有文章">[field:typename/]</a> | 踩踏：[field:click/]次 | 评论：<a href="[field:arcurl/]#comments" title="《[field:title function='html2text(@me)'/]》上的评论"><script type="text/javascript" src="/plus/feedcount.php?aid=[field:id/]"></script></a></div><div class="info">关键字：[field:keywords/]</div><div class="more"><a href="[field:arcurl/]" title="详细阅读 《[field:title function='html2text(@me)'/]》" rel="bookmark">阅读全文</a></div></div></div></li></ul><div class="clear"></div>
+{/dede:arclist}
+{dede:arclist typeid='1' row=4 orderby=pubdate titlelen='180' noflag='h'}
+<ul class="post-871 post type-post status-publish format-standard sticky hentry category-template tag-mepal tag-mepal tag-wordpress tag-206" id="post-871"><li><div class="article"><div class="mp_article"><h2 class="title entry-title"><a href="[field:arcurl/]" rel="bookmark" title="详细阅读 《[field:title/]》">[field:title function='(strlen("@me")>60 ? cn_substr("@me",60)."..." : "@me")'/]</a><span class="new"></span></h2><div class="thumbnail_box"><div class="thumbnail"><a href="[field:arcurl/]" rel="bookmark" title="[field:title function='html2text(@me)'/]"><img src="[field:litpic/]" width="140px" height="100px" alt="[field:title function='html2text(@me)'/]"/></a></div></div><div class="preview">导读：[field:description function='cn_substr(@me,240)'/]...</div><div class="info">作者：<span class="vcard author"><span class="fn">[field:writer/]</span></span> | 发布：<span class="updated">[field:pubdate function="MyDate('Y年m月d日',@me)"/]</span> | 分类： <a href="[field:typeurl/]" title="查看 [field:typename/] 的所有文章">[field:typename/]</a> | 踩踏：[field:click/]次 | 评论：<a href="[field:arcurl/]#comments" title="《[field:title function='html2text(@me)'/]》上的评论"><script type="text/javascript" src="/plus/feedcount.php?aid=[field:id/]"></script></a></div><div class="info">关键字：[field:keywords/]</div><div class="more"><a href="[field:arcurl/]" title="详细阅读 《[field:title function='html2text(@me)'/]》" rel="bookmark">阅读全文</a></div></div></div></li></ul><div class="clear"></div>
+{/dede:arclist}
+
+<div class="show"><div id="show_img"><div class="shows_lider">
+
+ {dede:arclist row=15 orderby=pubdate type='image.' typeid='2' titlelen='180'}
+<div class="show_box"><div class="thumbnail"><a href="[field:arcurl/]" rel="bookmark" title="[field:title function='html2text(@me)'/]"><img src="[field:litpic/]" width="130px" height="93px" alt="[field:title function='html2text(@me)'/]"/></a></div><div class="show_info"><div class="show_t">[field:title function='(strlen("@me")>24 ? cn_substr("@me",24)."..." : "@me")'/]</div><div class="show_t">时间：[field:pubdate function="MyDate('y年m月d日',@me)"/]</div><div class="show_t">踩踏：[field:click/]次</div><div class="show_t">评论：<a href="[field:arcurl/]#comments" title="《[field:title function='html2text(@me)'/]》上的评论"><script type="text/javascript" src="/plus/feedcount.php?aid=[field:id/]"></script></a></div></div></div>
+{/dede:arclist}
+
+
+
+</div></div></div><div id="show_links"><ul><li class="act"><a href="javascript:void(0)"></a></li><li ><a href="javascript:void(0)"></a></li><li ><a href="javascript:void(0)"></a></li></ul></div>
+<script type="text/javascript">
+$(document).ready(function(){setFocusSlid('#show_links', '#show_img', 700, 'h');});
+function setFocusSlid(linksId, imgId, height, dir){var li = $(linksId).find('li');var count = li.length;var focusIndex = 0;var focusInterval;var step = 1;
+var slidover = function(){var li = $(linksId).find('li');li.removeClass('act');$(li[focusIndex]).addClass('act');$(imgId).stop();
+if(dir=='h'){$(imgId).animate({scrollLeft: height * focusIndex}, 700);}else{$(imgId).animate({scrollTop: height * focusIndex}, 700);}}
+var slidout = function(){focusInterval = setInterval(slidInterval, 5000);}
+var slidInterval = function(){slidover();if(focusIndex == 0){step = 1;}
+if(focusIndex == count - 1){step = -1;}focusIndex+=step;}
+li.each(function(i){$(this).hover(function(){clearInterval(focusInterval);focusIndex = i;slidover();},function(){slidout();});});focusIndex = 1;slidout();}
+$(document).ready(function(){$('.show_box').hover(function(){$(this).find('img').animate({width:30,height:22, marginTop:65, marginLeft:95}, 300);},
+function(){$(this).find('img').animate({width:130,height:93, marginTop:0, marginLeft:0},300);});});
+</script><div class="clear"></div><div class="clear"></div><div class="mp_boke">
+</div><div class="clear"></div><div id="art_main" class="fl"> 
+
+{dede:channelArtlist typeid='3,4,5,6'}
+<div class="con_box fl qd_aritle" id="cat-{dede:global.itemindex/}"><h2><span><a href="{dede:field name='typeurl'/}" target="_blank">{dede:field name='typename'/}</a></span></h2><div class="cmsflimg"><ul>
+{dede:arclist row=1 flag='a' orderby=pubdate type='image.' titlelen='180'}
+<li><div class="cmsflimg_box"><div class="thumbnail"><a href="[field:arcurl/]" rel="bookmark" title="[field:title function='html2text(@me)'/]"><img src="[field:litpic/]" width="80px" height="57px" alt="[field:title function='html2text(@me)'/]"/></a></div></div><div class="cmsflimg_info"><div class="cmsflimg_name"><a href="[field:arcurl/]" title="详细阅读 《[field:title function='html2text(@me)'/]》">[field:title function='(strlen("@me")>39 ? cn_substr("@me",39)."..." : "@me")'/]</a></div><div class="cmsflimg_summary">作者：[field:writer/] | [field:pubdate function="MyDate('Y年m月d日',@me)"/]<br/>热度：[field:click/]次踩踏 | 评论：<a href="[field:arcurl/]#comments" title="《[field:title function='html2text(@me)'/]》上的评论"><script type="text/javascript" src="/plus/feedcount.php?aid=[field:id/]"></script></a></div></div></li>{/dede:arclist}</ul></div><div class="widgetr"><ul class="index_resourse_list qd_list">
+{dede:arclist row=5 noflag='a' orderby=pubdate titlelen='180'}
+<li><span class="fr">[field:pubdate function="MyDate('m-d',@me)"/]</span><a href="[field:arcurl/]" title="[field:title function='html2text(@me)'/]">[field:title function='(strlen("@me")>45 ? cn_substr("@me",45)."..." : "@me")'/]</a></li>
+{/dede:arclist}
+</ul></div></div>
+{/dede:channelArtlist}
+
+</div></div>
+
+{dede:include filename="right.htm"/}
+
+<div class="widget"><div class="widgetr"><div class="sponsor"><h3>友情链接</h3><div id="mp_links" class="mp_links" style="_padding-bottom:30px;height:125px;_height:110px;overflow:hidden;"><ul>
+{dede:flink type='text' typeid="0" row='24'}<li> [field:link /] </li>{/dede:flink}
+
+</ul></div></div></div></div><script type="text/javascript">function js_links(objs){$(objs).find("ul:first").animate({marginTop:"-25px"},1000,function(){$(this).css({marginTop:"0px"}).find("li:first").appendTo(this);$(this).css({marginTop:"0px"}).find("li:first").appendTo(this);});}
+$(document).ready(function(){var myars=setInterval('js_links("#mp_links")',3600)
+$("#mp_links").hover(function(){clearInterval(myars);},function(){myars=setInterval('js_links("#mp_links")',3600)});});</script>
+</div></div><script type="text/javascript">jQuery("#mp_loading div").animate({width:"40%"});</script>
+
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

@@ -1,0 +1,64 @@
+.listbox{
+	width:710px;
+	overflow:hidden;
+	float:left;
+	clear:both;
+	overflow:hidden;
+}
+.listbox dl{
+	width:352px;
+	margin-right:8px;
+	margin-top:2px;
+	float:left;
+}
+.listbox ul a{
+	color:#666;
+}
+
+.e8{/*图集列表专用大图列表*/
+	width:100%;
+	overflow:hidden;
+	clear:both;
+	margin-left:6px;
+	margin-top:16px;
+}
+.e8 li{
+	width:168px;
+	height:184px;
+	float:left;
+	display:block;
+	overflow:hidden;
+	margin-right:8px;
+	text-align:center;
+}
+.e8 li .pic{
+	width:160px;
+	height:120px;
+	display:block;
+	background:url(../images/picbox-listbg.gif) no-repeat;
+	text-align:left;
+	overflow:hidden;
+}
+.e8 li .pic img{
+	width:152px;
+	height:112px;
+	display:block;
+	margin-left:3px;
+	margin-top:3px;
+	border:none;
+}
+.e8 li .title{
+	height:31px;
+	display:block;
+	line-height:31px;
+	font-weight:bold;
+	overflow:hidden;
+}
+.e8 li .date{
+	color:#666;
+}
+.e8 li .date small{
+	line-height:17px;
+	font-size:12px;
+	color:#999;
+}

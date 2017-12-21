@@ -1,0 +1,1 @@
+<li><span class="fr">[field:pubdate function="MyDate('m-d',@me)"/]</span><a href="[field:arcurl/]" title="[field:title function='html2text(@me)'/]">[field:title function='(strlen("@me")>45 ? cn_substr("@me",45)."..." : "@me")'/]</a></li>

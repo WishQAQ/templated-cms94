@@ -1,0 +1,1 @@
+[field:pubdate function="MyDate('Y-m-d',@me)"/]

@@ -1,0 +1,1 @@
+INSERT INTO `dede_member_flink` VALUES('1','2','必诺软件','http://mirosoft.taobao.com');

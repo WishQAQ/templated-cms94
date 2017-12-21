@@ -1,0 +1,7 @@
+<div class="con_box fl qd_aritle" id="cat-{dede:global.itemindex/}"><h2><span><a href="{dede:field name='typeurl'/}" target="_blank">{dede:field name='typename'/}</a></span></h2><div class="cmsflimg"><ul>
+{dede:arclist row=1 flag='a' orderby=pubdate type='image.' titlelen='180'}
+<li><div class="cmsflimg_box"><div class="thumbnail"><a href="[field:arcurl/]" rel="bookmark" title="[field:title function='html2text(@me)'/]"><img src="[field:litpic/]" width="80px" height="57px" alt="[field:title function='html2text(@me)'/]"/></a></div></div><div class="cmsflimg_info"><div class="cmsflimg_name"><a href="[field:arcurl/]" title="详细阅读 《[field:title function='html2text(@me)'/]》">[field:title function='(strlen("@me")>39 ? cn_substr("@me",39)."..." : "@me")'/]</a></div><div class="cmsflimg_summary">作者：[field:writer/] | [field:pubdate function="MyDate('Y年m月d日',@me)"/]<br/>热度：[field:click/]次踩踏 | 评论：<a href="[field:arcurl/]#comments" title="《[field:title function='html2text(@me)'/]》上的评论"><script type="text/javascript" src="/plus/feedcount.php?aid=[field:id/]"></script></a></div></div></li>{/dede:arclist}</ul></div><div class="widgetr"><ul class="index_resourse_list qd_list">
+{dede:arclist row=5 noflag='a' orderby=pubdate titlelen='180'}
+<li><span class="fr">[field:pubdate function="MyDate('m-d',@me)"/]</span><a href="[field:arcurl/]" title="[field:title function='html2text(@me)'/]">[field:title function='(strlen("@me")>45 ? cn_substr("@me",45)."..." : "@me")'/]</a></li>
+{/dede:arclist}
+</ul></div></div>

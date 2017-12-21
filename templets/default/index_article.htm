@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+	
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+-->
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<!-- /header -->
+
+<div id="content"><div class="main" id="main"><div class="crumbs"><div class="crumbs_name"><i></i><p>正在阅读：</p></div><ul><li class="crumbsli"><a title="返回首页" href="/">首页</a> » <a href="{dede:type typeid=’0′ row=1}[field:typelink /]{/dede:type}" title="查看 {dede:field.typename/} 的所有文章">{dede:field.typename/}</a> » 当前文章</li></ul></div><div class="left"><div class="single" id="single"><div class="mp_single" id="mp_single"><div id="single_card" style="width:680px;"><h1 class="post_tits">{dede:field.title/}</h1><div class="post_hd" style="display:none;">
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare stb_share_buttons stb_group"><a class="bds_qzone" id="stb_btn_qzone" href="javascript:void(0);" title="分享到QQ空间"></a><a class="bds_tsina" id="stb_btn_weibo" href="javascript:void(0);" title="分享到新浪微博"></a><a class="bds_tqq" id="stb_btn_tqq" href="javascript:void(0);" title="分享到腾讯微博"></a><a class="bds_t163" id="stb_btn_t163" href="javascript:void(0);" title="分享到网易微博"></a><a class="bds_mshare" id="stb_btn_mshare" href="javascript:void(0);" title="一键分享所有"></a><span class="bds_more" id="stb_btn_more"><span id="stb_sbtn_more_icon"></span></span><a class="shareCount" href="javascript:void(0);"></a></div>
+
+<div class="post_dw"><div class="bdlikebutton" style="float: left;"></div><div class="stb_divide1"></div></div><div class="post_zj"><div class="single_size"><a class="single_info_size" id="stb_btn_xiao" href="javascript:mp_single_size(12)" title="文章小字体"></a><a class="single_info_size" id="stb_btn_zhong" href="javascript:mp_single_size(15)" title="文章中字体"></a><a class="single_info_size" id="stb_btn_da" href="javascript:mp_single_size(24)" title="文章大字体"></a><a class="single_info_size" id="stb_btn_kuan" href="javascript:single_pix(1)" title="宽屏阅读"></a><a style="display:none;" class="single_info_size" id="stb_btn_zhai" href="javascript:single_pix(0)" title="窄屏阅读"></a></div><span id="showb_star" class="showb_star" style="margin-top:5px;margin-left:10px;"><em style="width:100%"></em></span></div><div class="stb_groups"><div class="stb_divide2"></div><span id="stb_art_view_icon"></span><span id="stb_view_count"><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script></span></div></div></div><div class="clear"></div><div class="single_read" id="single_read">
+
+{dede:field.content/}
+
+</div></div></div></div>
+<div class="mp_boke">
+</div><div class="clear"></div><div class="left"><div class="review" id="review"><div class="navigation"><div class="pagination"></div></div><div id="respond"><h3 id="comments">留下脚印，证明你来过。</h3>
+<link href="{dede:global.cfg_templets_skin/}/css/pinglun.css" rel="stylesheet" media="screen" type="text/css" />
+{dede:include file='ajaxfeedback.htm' /}
+
+</div></div></div></div>
+
+{dede:include filename="right.htm"/}
+
+<!--<div class="widget widget_text"><div class="textwidget">
+
+</div></div>-->
+
+<div id="mp_historyg" class="widget"><div class="widgetr"><div class="sponsor"><h3>您刚刚看过</h3><div id="mp_historys"></div></div></div></div><script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function($){var documentHeight=0;var topPadding=50;$(function(){var offset=$("#mp_historyg").offset();documentHeight=$(document).height();$(window).scroll(function(){var sideBarHeight=$("#mp_historyg").height();if($(window).scrollTop()>offset.top){var newPosition=($(window).scrollTop()-offset.top)+topPadding;var maxPosition=documentHeight-(sideBarHeight);if(newPosition>maxPosition){newPosition=maxPosition;}
+$("#mp_historyg").stop().animate({marginTop:newPosition});}else{$("#mp_historyg").stop().animate({marginTop:0});};});});});</script>
+<script type="text/javascript">ViewHistory=function(){this.config={limit:10,storageKey:'viewHistory',primaryKey:'url'};this.cache={localStorage:null,userData:null,attr:null};};ViewHistory.prototype={init:function(config){this.config=config||this.config;var _self=this;if(!window.localStorage&&(this.cache.userData=document.body)&&this.cache.userData.addBehavior&&this.cache.userData.addBehavior('#default#userdata')){this.cache.userData.load((this.cache.attr='localStorage'));this.cache.localStorage={'getItem':function(key){return _self.cache.userData.getAttribute(key);},'setItem':function(key,value){_self.cache.userData.setAttribute(key,value);_self.cache.userData.save(_self.cache.attr);}};}else{this.cache.localStorage=window.localStorage;}},addHistory:function(item){var items=this.getHistories();for(var i=0,len=items.length;i<len;i++){if(item[this.config.primaryKey]&&items[i][this.config.primaryKey]&&item[this.config.primaryKey]===items[i][this.config.primaryKey]){items.splice(i,1);break;}}
+items.push(item);if(this.config.limit>0&&items.length>this.config.limit){items.splice(0,1);}
+var json=JSON.stringify(items);this.cache.localStorage.setItem(this.config.storageKey,json);},getHistories:function(){var history=this.cache.localStorage.getItem(this.config.storageKey);if(history){return JSON.parse(history);}
+return[];}};if(typeof localStorage!=='undefined'&&typeof JSON!=='undefined'){var viewHistory=new ViewHistory();viewHistory.init({limit:15,storageKey:'viewHistory',primaryKey:'url'});}
+if(viewHistory){var page={"title":document.getElementsByTagName('title')[0].innerHTML,"url":location.href};viewHistory.addHistory(page);}
+var wrap=document.getElementById('mp_historys');if(viewHistory&&wrap){var histories=viewHistory.getHistories();var list=document.createElement('ul');if(histories&&histories.length>0){for(var i=histories.length-1;i>=0;i--){var history=histories[i];var item=document.createElement('li');var link=document.createElement('a');link.href=history.url;var htitle=history.title.split("|");link.title=htitle[0]
+htitles=htitle[0].substring(0,15);link.innerHTML=htitles;item.appendChild(link);list.appendChild(item);}
+wrap.appendChild(list);}}
+//]]>
+</script>
+</div></div>
+
+{dede:include filename="footer2.htm"/}
+<!-- /footer -->
+
+<script type="text/javascript">
+//<![CDATA[
+document.write(unescape("%3Cscript type='text/javascript' id='bdshare_js' data='type=tools&uid=0'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript type='text/javascript' id='bdshell_js'%3E%3C/script%3E"));
+document.getElementById("bdshell_js").src="http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion="+new Date().getHours();
+//]]>
+</script>
+<script type="text/javascript" id="bdlike_shell"></script>
+<script type="text/javascript">var bdShare_config={"type":"small","color":"blue","uid":"0","likeText":"看完必踩","likedText":"已踩过"};
+document.getElementById("bdlike_shell").src="http://bdimg.share.baidu.com/static/js/like_shell.js?t=" + Math.ceil(new Date()/3600000);</script>
+<script type="text/javascript">
+//<![CDATA[
+	document.write(unescape("%3Cscript type='text/javascript' id='bdshare_js' data='type=slide&img=2&pos=right&uid=0'%3E%3C/script%3E"));
+	document.write(unescape("%3Cscript type='text/javascript' id='bdshell_js'%3E%3C/script%3E"));
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+//]]>
+</script><!--[if lt IE 10]>
+<style>
+.center,.article,.crumbs,#slider_img,.two_slider,.pagination span,.pagination a,#show_img,.con_box,.widget,.single,.related,.review,#mp_404,#cse,#station{border:1px solid #DDD\9;}
+</style>
+<![endif]-->
+<script type="text/javascript">jQuery(document).ready(function(){jQuery("#mp_loading div").animate({width:"100%"},800,function(){setTimeout(function(){jQuery("#mp_loading div").fadeOut(500);});});});</script><script type="text/javascript">window.onload=function(){jQuery(document).ready(function(){jQuery(".post_hd").toggle(600);});}</script>
+</body>
+</html>

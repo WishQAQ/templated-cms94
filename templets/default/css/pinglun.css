@@ -1,0 +1,520 @@
+/***
+ *	DedeCMS v5.3 Style (grass green)
+ *	dedecms.com  Author pigz  2008-11-10 10:57
+ **/
+
+/*--------------------------------------------------
+ box base
+ ---------------------------------------------*/
+/* 自适应宽度的块(通用块) */
+.mt1{/* ( margin-top * 1 ) */
+	margin-top:8px;
+}
+
+.tbox{
+	margin:0 0 8px 0;
+	border-bottom:1px solid #DADADA;
+	overflow:hidden;
+	background:url(../images/green_skin.png) 0 -294px repeat-x;
+}
+.tbox dt{
+	height:24px;
+	border:1px solid #DADADA;
+	overflow:hidden;
+	clear:both;
+}
+.tbox dd{
+	border-left:1px solid #DADADA;
+	border-right:1px solid #DADADA;
+	/*padding:4px 4px 0px;*/
+	overflow:hidden;
+}
+
+.tbox dt strong{
+	height:24px;
+	line-height:24px; !important;line-height:25px;
+	padding-left:8px;
+	padding-right:4px;
+	display:block;
+	float:left;
+	color:#0088dc;
+	letter-spacing:1px;
+}
+.tbox dt strong a{
+	color:#316301;
+}
+.tbox dt strong a:hover{
+	color:#596F37;
+	text-decoration:none;
+}
+.tbox dt span.more{
+	float:right;
+	position:relative;
+	line-height:25px;
+	padding-right:8px;
+	color:#596F37;
+}
+.tbox dt span.more a{
+	color:#fff;
+	text-decoration:none;
+}
+.tbox dt span.more a:hover{
+	color:#ff3333;
+	text-decoration:underline;
+}
+.tbox dt span.label{
+	height:25px;
+	float:right;
+	overflow:hidden;
+	padding-right:1px;
+	padding-top:2px;
+}
+.tbox dt span.label a{
+	height:26px;
+	display:block;
+	padding:0px 7px 0px 8px;
+	line-height:26px;
+	border-left:1px solid #DADADA;
+	float:left;
+	color:#666;
+	text-decoration:none;
+	overflow:hidden;
+	letter-spacing:1px;
+}
+.tbox dt span.label a:hover{
+	color:#360;
+}
+.tbox dt span.label a.thisclass{
+	background:#FFF;
+	color:#333;
+	border-top:3px solid #DADADA;
+}
+
+.tbox dt span.linklabel{
+	float:left;
+	margin-left:10px;
+	overflow:hidden;
+	padding-right:1px;
+	padding-top:2px;
+}
+.tbox dt span.linklabel a{
+	height:20px;
+	display:block;
+	padding:0px 7px 0px 8px;
+	margin:0 5px;
+	line-height:20px;
+	border-left:1px solid #DADADA;
+	border-top:1px solid #DADADA;
+	border-right:1px solid #DADADA;
+	float:left;
+	color:#666;
+	text-decoration:none;
+	overflow:hidden;
+	letter-spacing:1px;
+}
+.tbox dt span.linklabel a:hover{
+	color:#360;
+}
+.tbox dt span.linklabel a.thisclass{
+	background:#FFF;
+	color:#333;
+}
+
+.ipt-txt{
+	line-height:15px;
+	padding:4px 5px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#666 #BBB #BBB #666;
+	font-size:12px;
+	margin-right:2px;
+}
+/* 较重颜色的Box */
+.light {
+	background:none;
+}
+.light dt{
+	height:24px;
+	border:1px solid #DADADA;
+	overflow:hidden;
+	background:url(../images/green_skin.png) 0 -188px repeat-x;
+	clear:both;
+}
+.light dd{
+	border-left:1px solid #DADADA;
+	border-right:1px solid #DADADA;
+	/*padding:4px 4px 0px;*/
+	overflow:hidden;
+}
+dt.light strong{
+	color:#316301;
+}
+
+.f2{/* 评论专用列表 */
+	overflow:hidden;
+}
+.f2 li{
+	height:73px;
+	clear:both;
+	overflow:hidden;
+	border-bottom:1px dashed #DCEBD7;
+	padding:0px 8px;
+}
+.f2 small{
+	display:block;
+	height:21px;
+	padding-top:6px;
+	line-height:21px;
+	overflow:hidden;
+	font-size:12px;
+	color:#999;
+}
+.f2 small a.username{
+	color:#666;
+}
+.f2 p{
+	height:42px;
+	overflow:hidden;
+	line-height:21px;
+	color:#888;
+	text-indent:17px;
+	background:url(../images/ico-comment-quote.gif) 0px 4px no-repeat;
+}
+
+/*评论
+------------*/
+.decmt-box2{
+	width:98%;
+	padding:6px 5px;
+	margin:0px auto;
+	overflow:hidden;
+	clear:both;
+}
+.decmt-box2 span.fr{
+	float:right;	
+	}
+.decmt-box2 span.title{
+	float:left;
+	line-height:20px;
+	width:600px;
+	}
+.decmt-box2 ul{
+	}
+.decmt-box2 ul li{
+	width:100%;
+	border-bottom:1px dashed #ccc;
+	padding-bottom:10px;
+	overflow:hidden;
+	}
+.decmt-box2 ul li a.plpic{
+	float:left;
+	width:40px;
+	height:40px;
+	padding:2px;
+	border:1px solid #DFD9B9;
+	background:#F9FDED;
+	margin-right:5px;
+	overflow:hidden;
+	}
+.decmt-box2 ul li p{
+	float:left;
+	width:630px;
+	line-height:22px;
+	}
+.decmt-box2 .comment_act{
+	float:left;
+	width:630px;
+	line-height:20px;
+	color:#aeaeae;
+	}
+.decmt-box2 .comment_act a{
+	color:#aeaeae;
+	}
+    
+    
+.decmt-box{
+	width:98%;
+	padding:6px 5px;
+	margin:0px auto;
+	overflow:hidden;
+	clear:both;
+}
+.decmt-box span.fr{
+	float:right;	
+	}
+.decmt-box span.title{
+	float:left;
+	line-height:20px;
+	width:600px;
+	}
+.decmt-box ul{
+	}
+.decmt-box ul li{
+	width:100%;
+	border-bottom:1px dashed #ccc;
+	padding-bottom:10px;
+	overflow:hidden;
+	}
+.decmt-box ul li a.plpic{
+	float:left;
+	width:40px;
+	height:40px;
+	padding:2px;
+	border:1px solid #DFD9B9;
+	background:#F9FDED;
+	margin-right:5px;
+	overflow:hidden;
+	}
+.decmt-box ul li p{
+	float:left;
+	width:630px;
+	line-height:22px;
+	}
+.decmt-box .comment_act{
+	float:left;
+	width:630px;
+	line-height:20px;
+	color:#aeaeae;
+	}
+.decmt-box .comment_act a{
+	color:#aeaeae;
+	}
+	
+.decmt-box1{
+	width:98%;
+	padding:6px 5px;
+	margin:0px auto;
+	overflow:hidden;
+	clear:both;
+}
+.decmt-box1 span.fr{
+	float:right;	
+	}
+.decmt-box1 span.title{
+	float:left;
+	line-height:20px;
+	width:600px;
+	}
+.decmt-box1 ul{
+	}
+.decmt-box1 ul li{
+	width:100%;
+	border-bottom:1px dashed #ccc;
+	padding:10px 0;
+	overflow:hidden;
+	}
+.decmt-box1 ul li a.plpic{
+	float:left;
+	width:40px;
+	height:40px;
+	padding:2px;
+	border:1px solid #DFD9B9;
+	background:#F9FDED;
+	margin-right:5px;
+	overflow:hidden;
+	}
+.decmt-box1 ul li p{
+	float:left;
+	width:880px;
+	line-height:22px;
+	}
+.decmt-box1 .comment_act{
+	float:left;
+	width:880px;
+	line-height:20px;
+	color:#aeaeae;
+	}
+.decmt-box1 .comment_act a{
+	color:#aeaeae;
+	}
+
+
+.dede_comment .decmt-box .decmt-title{
+	line-height:19px;
+	color:#999;
+	font-family:Tahoma;
+}
+.dede_comment .decmt-box .decmt-title span{
+	margin-right:2px;
+	vertical-align:middle;
+}
+.dede_comment .decmt-box .decmt-title .moodico{
+	height:18px;
+	width:18px;
+	display:inline-block;
+}
+.dede_comment .decmt-box .decmt-title .username{
+	color:#669;
+}
+.dede_comment .decmt-box .decmt-title .username a{
+	color:#669;
+}
+.dede_comment .decmt-box .decmt-title .username a:hover{
+	text-decoration:none;
+	color:#690;
+}
+.dede_comment .decmt-box .decmt-title .ip{
+	color:#669;
+	font-size:11px;
+}
+.dede_comment .decmt-box .decmt-title .date{
+	color:#555;
+	font-size:11px;
+}
+.dede_comment .decmt-box .decmt-act{
+	float:right;
+	margin-top:-18px;
+	padding-right:10px;
+	position:relative;
+	clear:both;
+	color:#999;
+}
+.dede_comment .decmt-box .decmt-act span{
+	margin-right:7px;
+}
+.dede_comment .decmt-box .decmt-act span a{
+	color:#888;
+}
+.dede_comment .decmt-box .decmt-content{
+	color:#555;
+	line-height:21px;
+	clear:both;
+	width:99%;
+	margin:2px auto 0px;
+/*	background:url(../images/ico-comment-quote.gif) 0px 4px no-repeat;
+	text-indent:18px;*/
+}
+.dede_comment .decmt-box .decmt-content img{
+	vertical-align:middle;
+}
+.decmt-box,.decmt-content .decmt-box,.dede_comment .decmt-box .decmt-box {
+	background:#FFE;
+	border:1px solid #CCC;
+	margin:6px auto;
+}
+.dede_comment .decmt-box .decmt-box .decmt-title{
+	text-indent:4px;
+}
+.dede_comment .decmt-box .decmt-box .decmt-content{
+	color:#555;
+}
+.nocomment{
+	padding:10px;
+	color:#666;
+}
+.dede_comment_post{
+	padding:5px;
+}
+.dcmp-title{
+	line-height:25px;
+}
+.dcmp-title strong{
+	color:#444;
+	font-weight:normal;
+}
+.dcmp-title small{
+	font-size:12px;
+	color:#999999;
+}
+.dcmp-stand{
+	float:right;
+	margin-top:-18px;
+	padding-right:10px;
+	position:relative;
+	clear:both;
+	color:#999;
+}
+.dcmp-stand strong{
+	font-weight:normal;
+	color:#444;
+}
+.dcmp-stand input{
+	margin-right:2px;
+}
+.dcmp-stand img{
+	vertical-align:middle;
+	margin-right:2px;
+}
+.dcmp-content{
+	padding-top:8px;
+}
+.dcmp-content textarea{
+	height:100px;
+	width:450px;
+	float:left;
+}
+.dcmp-content1{
+	/*width:700px;*/
+	padding-top:8px;
+}
+.dcmp-content1 textarea{
+	height:100px;
+	width:700px;
+	float:left;
+}
+.dcmp-mood{
+	height:25px;
+	width:212px;
+	margin-top:8px;
+	float:right;
+}
+.dcmp-mood strong{
+	float:left;
+	color:#444;
+	font-weight:normal;
+	line-height:25px;
+}
+.dcmp-mood ul{
+	float:left;
+}
+.dcmp-mood ul li{
+	float:left;
+	margin-right:8px;
+	height:30px;
+}
+.dcmp-mood ul li input,.dcmp-mood ul li img{
+	vertical-align:middle;
+	margin-right:4px;
+	*margin-right:0px;
+}
+.dcmp-post{
+	height:35px;
+	overflow:hidden;
+	clear:both;
+	color:#444;	
+	padding:5px 0 10px 0;
+}
+.dcmp-post .dcmp-userinfo{
+	float:left;
+	margin-right:6px;
+
+}
+.dcmp-post .dcmp-userinfo input{
+	height:13px;
+	padding-right:0px;
+}
+.dcmp-post .dcmp-userinfo input,.dcmp-post .dcmp-userinfo img{
+	vertical-align:middle;
+	margin:5px;
+}
+.dcmp-post .dcmp-submit{
+	float:left;
+	padding-top:6px;
+}
+.dcmp-post .dcmp-submit input,.dcmp-post .dcmp-submit button{
+	vertical-align:middle;
+}
+.dcmp-post .dcmp-submit button{
+	width:70px;
+	height:25px;
+	border:none;
+	background:url(../images/btn-bg2.gif) no-repeat;
+	line-height:25px;
+	letter-spacing:1px;
+	overflow:hidden;
+	color:#444;
+	cursor:pointer;
+	margin-left:5px;
+
+}
+

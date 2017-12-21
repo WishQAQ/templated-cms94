@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+	
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+-->
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<!-- /header -->
+
+<div id="content"><div class="main"><div class="crumbs"><div class="crumbs_name"><i></i><p>当前位置：</p></div><ul><li class="crumbsli">{dede:field name='position'/}</li></ul></div><div class="mp_boke">
+</div><div class="clear"></div>
+
+<!-- listbox -->
+<link href="{dede:global.cfg_templets_skin/}/css/piccol.css" rel="stylesheet" media="screen" type="text/css" />
+<div class="listbox">
+			<ul class="e8">
+           {dede:list pagesize='36'}
+				<li>
+					<a href="[field:arcurl/]" class="pic" title="[field:title function='html2text(@me)'/]"><img src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]"/></a>
+					<a href="[field:arcurl/]" class="title" title="[field:title function='html2text(@me)'/]">[field:title/]</a>
+					<span class="date"><small>发布日期：</small>[field:pubdate function="GetDateMK(@me)"/]</span>
+				</li>
+          {/dede:list}
+			</ul>
+		</div><!-- /listbox -->
+
+<div class="navigation"><div class='pagination'>{dede:pagelist listitem="pageno" listsize="5"/}</div>
+</div></div>
+
+{dede:include filename="right.htm"/}
+
+<!--<div class="widget widget_text"><div class="textwidget">
+
+</div></div>-->
+
+</div></div>
+
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

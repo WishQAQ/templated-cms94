@@ -1,0 +1,1 @@
+<li><img class="avatar" src="[field:phpurl/]/plus/guestbook/images/[field:face /].gif" width="36" height="36" alt="[field:uname /]"/>[field:uname /]<br/><a href="[field:phpurl/]/plus/guestbook.php" title="内容：[field:msg/]&nbsp;IP:[field:ip /]">[field:msg function="cn_substr('@me',60)"/]</a></li><li style="border:1px dashed #ccc;"></li>

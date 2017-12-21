@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>搜索页_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+	
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+-->
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<!-- /header -->
+
+<div id="content"><div class="main"><div class="crumbs"><div class="crumbs_name"><i></i><p>当前位置：</p></div><ul><li class="crumbsli">搜索 <strong> {dede:global name='keyword' function='RemoveXSS(@me)'/} </strong> 的结果</li></ul></div><div class="mp_boke">
+</div><div class="clear"></div>
+{dede:list pagesize='10' titlelen='180'}
+<ul class="post-51 post type-post status-publish format-standard hentry category-nailao tag-15 tag-qb" id="post-51">
+<li><div class="article"><div class="mp_article"><h2 class="title entry-title"><a href="[field:arcurl/]" rel="bookmark" title="详细阅读 《[field:title function='html2text(@me)'/]》">[field:title function='(strlen("@me")>60 ? cn_substr("@me",60)."..." : "@me")'/]</a><span class="new"></span></h2><div class="thumbnail_box"><div class="thumbnail"><a href="[field:arcurl/]" rel="bookmark" title="[field:title function='html2text(@me)'/]"><img src="[field:litpic/]" width="140px" height="100px" alt="[field:title function='html2text(@me)'/]"/></a></div></div><div class="preview">摘要：
+[field:description/]...</div><div class="clear"></div><div class="info">作者：<span class="vcard author"><span class="fn">[field:writer/]</span></span> | 发布：<span class="updated">[field:pubdate function="MyDate('Y年m月d日',@me)"/]</span> | 分类： <a href="[field:typeurl/]" title="查看 [field:typename/] 的所有文章">[field:typename/]</a> | 踩踏：<script src="[field:phpurl/]/count.php?aid=[field:ID/]&mid=[field:memberID/]&view=yes" language="javascript"></script>次 | 评论：<a href="[field:arcurl/]#comments" title="《[field:title function='html2text(@me)'/]》上的评论"><script type="text/javascript" src="/plus/feedcount.php?aid=[field:id/]"></script></a></div><div class="info">标签：[field:id function=GetTags(@me)/] </div><div class="more"><a href="[field:arcurl/]" title="详细阅读 《[field:title function='html2text(@me)'/]》" rel="bookmark">阅读全文</a></div></div></div></li></ul><div class="clear"></div>
+{/dede:list}
+
+<div class="navigation"><div class='pagination'>{dede:pagelist listitem="pageno" listsize="5"/}</div>
+</div></div>
+
+{dede:include filename="right.htm"/}
+
+<!--<div class="widget widget_text"><div class="textwidget">
+
+</div></div>-->
+
+</div></div>
+
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

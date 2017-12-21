@@ -1,0 +1,1 @@
+<li><a href="[field:spaceurl/]" target="_blank" rel="external nofollow" title="昵称：[field:uname/]"><img class="avatar" src="[field:face/]" width="36" height="36" alt="[field:spacename/]"/></a></li>

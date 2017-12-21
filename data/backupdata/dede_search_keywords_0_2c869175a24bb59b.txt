@@ -1,0 +1,1 @@
+INSERT INTO `dede_search_keywords` VALUES('1','请输入关键字进行搜索','请 输入 关键字 进行 搜索','3','0','1374134237','0','0');
